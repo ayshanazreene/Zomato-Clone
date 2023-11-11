@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zomato</title>
+  <link rel="icon" type="image/png" href=https://b.zmtcdn.com/images/logo/zomato_logo_2017.png>
+
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./src/input.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Jacques+Francois&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Jacques+Francois&family=Lexend+Deca:wght@100&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Jacques+Francois&family=Lexend+Deca:wght@200&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <header>
+    <!-- navigation bar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+      <div class="container-fluid  d-flex justify-content-between">
+        <img class=" navbar-brand ms-5 me-5"
+          src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"
+          width="120" height="40">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex" role="search" id="searchForm">
+          <div class="btn dropdown ps-4 pe-5">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Location
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">California</a></li>
+              <li><a class="dropdown-item" href="#">Dallas</a></li>
+              <li><a class="dropdown-item" href="#">San Diego</a></li>
+            </ul>
+          </div>
+          <input class=" form-control border-0" placeholder="Search for Restaurant or Dish">
+          <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+
+          <ul class="navbar-nav mb-2 mb-lg-0 w-100">
+            <li class="nav-item ps-3">
+              <a class="nav-link" style="font-weight: 200; font-size: 1.2rem;" aria-current="page" href="#">Log in</a>
+            </li>
+            <li class="nav-item ps-3">
+              <a class="nav-link" style="font-weight: 200; font-size: 1.2rem;" href="#">Sign Up</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+
+
+
+  </header>
+
+  <nav class="navbar" id="sub-nav">
+
+    <div class="container mt-5">
+      <ul class="list-unstyled d-flex flex-wrap">
+        <a href class="nav-item ms-3 nav-menu text-decoration-none text-dark">
+          <img class="rounded-circle" src="https://th.bing.com/th/id/OIP.1G7nu28sBEeKPjIAsqogTAHaHa?pid=ImgDet&rs=1"
+            width="50" alt="">
+          <span class="fs-5">Delivery</span>
+        </a>
+        <a href="" class=" nav-item  border-0 ms-3 nav-menu text-decoration-none text-secondary">
+          <img class="rounded-circle " src="https://th.bing.com/th/id/OIP.Tk4Xbw8AAPEb2HQIiVgz5gHaHa?pid=ImgDet&rs=1"
+            width="50" alt="">
+          <span class="fs-5">Dining Out</span>
+        </a>
+        <a href="" class="nav-item border-0 ms-3 nav-menu text-decoration-none text-secondary">
+          <img class="rounded-circle "
+            src="https://thumbs.dreamstime.com/b/mug-full-beer-icon-outline-style-isolated-white-background-vector-illustration-83214171.jpg"
+            width="50" alt="">
+          <span class="fs-5">Night Life</span>
+        </a>
+      </ul>
+    </div>
+
+  </nav>
+  <hr>
+
+  <!-- filter buttons -->
+  <nav class="navbar" id="sub-nav">
+
+    <div class="container nb">
+      <ul id="filter" class="list-unstyled d-flex flex-wrap">
+        <li class="nav-item ms-3">
+          <button class="btn border text-secondary" type=""><span
+              style="font-weight: 200; font-size:.8rem;">Filters</span></button>
+        </li>
+        <li class="nav-item ms-3">
+          <button class="btn border text-secondary" type=""><span
+              style="font-weight: 200; font-size:.8rem;">Rating:4.0+</span></button>
+        </li>
+        <li class="nav-item ms-3">
+          <button class="btn border text-secondary" type=""><span style="font-weight: 200; font-size:.8rem;">Pure
+              Veg</span></button>
+        </li>
+        <li class="nav-item ms-3">
+          <div class="btn border-secondary-subtle text-secondary dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span style="font-weight: 200; font-size:.8rem;">Cuisines</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <input class="form-control" type="search" placeholder="Search here" aria-label="Search">
+              </li>
+              <li><input type="checkbox" name="" id=""> Afghani</li>
+              <li><input type="checkbox" name="" id=""> Chinese</li>
+              <li><input type="checkbox" name="" id=""> Danish</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+  <!-- inpiration div -->
+
+  <div class="container mb-5" id="inspo">
+
+    <div class=" fs-2">Inspiration for your first order</div>
+
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex ">
+            <div class="card border-0 m-lg-4  item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png"
+                class="card-img-top" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Biriyani</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Pizza</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Thali</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Chicken</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Burger</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/e444ade83eb22360b6ca79e6e777955f1632716661.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Fried Rice</p>
+              </div>
+            </div>
+            <!-- <div class="card border-0 m-4 animate__animated animate__pulse item" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/dish_images/d9766dd91cd75416f4f65cf286ca84331634805483.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center fw-bold">Idli</p>
+              </div>
+            </div>
+            <div class="card border-0 m-4 animate__animated animate__pulse item" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center fw-bold">North Indian</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex ">
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/bf4bde7b78d517ac8460ea03d4c64a7f1632716550.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Vada</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Dosa</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Sandwich</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4  item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/a2163bedb069e3069db0a88d7a3c848f1676534399.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Tea</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4  item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/dish_images/d9766dd91cd75416f4f65cf286ca84331634805483.png"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Idli</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 " data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img src="https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg"
+                class="card-img-top rounded-circle" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center">North Indian</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- brands -->
+  <div class="container mt-5">
+
+    <div class=" fs-2">Top Brands for you</div>
+
+    <div id="carouselExample2" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex">
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/6a11fd0f30c9fd9ceaff2f5b21f61d23_1617187857.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Burger King</p>
+                <p class="time text-center ">23 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/22529ff52d41a4aa3b36ac1e7e0c0db3_1605099406.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Haldiram's</p>
+                <p class="time text-center ">12 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/466f8fc74274145f3b21795c3d21816d_1589433692.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">KFC</p>
+                <p class="time text-center ">35 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/1356425eff0c9acd8ab6b0ad351759e4_1611253489.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Bikanerwala</p>
+                <p class="time text-center ">20 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/ff3d2543b65456e19d204cd385ecbb63_1605093994.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Kaleva</p>
+                <p class="time text-center ">15 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/9302c59eca94abbee01aec9acf9305f6_1676471786.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Subway</p>
+                <p class="time text-center ">45 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex ">
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/ed9718e64b3307ae4aaee0bc81c1ea15_1625155060.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Chaayos</p>
+                <p class="time text-center ">30 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/84edd5489389f21069c09f0c88ea8abb_1628179220.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Theobroma</p>
+                <p class="time text-center ">22 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-lg-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/1cbe03ee1c6933e8fb2021cd835e889d_1624021602.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">RollsKing</p>
+                <p class="time text-center ">15 min</p>
+              </div>
+            </div>
+            <div class="card border-0 m-4 item" data-aos="zoom-in" data-aos-duration="500" style="width: 8.5rem" ;>
+              <img
+                src="https://b.zmtcdn.com/data/brand_creatives/logos/e440f9f1ecd563d76ae0338589a7caad_1687347069.png?output-format=webp"
+                class="card-img-top rounded-circle shadow p-3" width="2px" alt="...">
+              <div class="card-body">
+                <p id="card-text" class="card-text text-center ">Great Indian Khichdi</p>
+                <p class="time text-center">43 min</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Delivery Restaurants in Delhi NCR -->
+  <div class="container mt-5">
+    <div class=" fs-2">Delivery Restaurants in Delhi NCR</div>
+    <!-- row1 -->
+    <div class="row mt-4">
+      <div class="d-flex flex-wrap">
+        <!-- card1 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div>
+          <!-- <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div> -->
+          <img
+            src="https://b.zmtcdn.com/data/pictures/9/4249/926e2ac1722a3fd397cd21b6b8a0a298_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" width="20px" height="230px" alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw ">Wenger's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.5<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Icecreams,Cakes</p>
+              <p id="cost" class="w-50" style="text-align: right;">$50 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">36 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card2 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/5/19144765/ae4bee1430d091eedd5c853b4bd91689_o2_featured_v2.jpg?output-format=webp"
+            class="card-img-top rounded-4" data-aos="zoom-in" width="20px" height="230px" alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Kwality Wall’s Frozen Dessert and Ice Cream Shop</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.6<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Icecreams,Desserts</p>
+              <p id="cost" class="w-50" style="text-align: right;">$10 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">20 min</div>
+            </div>
+            <!--<hr>
+               <div class="d-flex text-wrap">
+                <img src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" width="20%" height="10%" alt="">
+                <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+              </div> -->
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card3 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/2/307332/4a87d3d44b79ae988c180f9beaee3973_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" width="20px" height="230px" alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Wraps Kathi Rolls</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.5<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Rolls, Wraps, Momos</p>
+              <p id="cost" class="w-50" style="text-align: right;">$5 for one</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">40 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp"
+                width="12%" height="12%" alt="">
+              <p id="max">Restaurant partner follows WHO protocol</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+
+      </div>
+    </div>
+    <!-- row2 -->
+    <div class="row mt-4">
+      <div class="d-flex flex-wrap">
+        <!-- card1 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">20% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/1/461/72251ef2ed03f2179854a92d573f199a_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw ">Karim's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">3.9<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">North Indian, Mughlai</p>
+              <p id="cost" class="w-50" style="text-align: right;">$200 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">36 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp"
+                width="12%" height="12%" alt="">
+              <p id="max">Restaurant partner follows WHO protocol</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card2 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/6/8776/8bafe5daa26d74e93ad44a2d1b6f6c5f_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Nando's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.4<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Burger, Healthy Food, Portuguese</p>
+              <p id="cost" class="w-50" style="text-align: right;">$100 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">20 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card3 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img src="https://b.zmtcdn.com/data/pictures/chains/0/550/9361ee4d0e18519da526b87f81f067ae_o2_featured_v2.jpg"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Haldiram's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.2<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Rolls, Wraps, Momos</p>
+              <p id="cost" class="w-50" style="text-align: right;">$5 for one</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">40 min</div>
+            </div>
+            <!-- <hr>
+          <div class="d-flex text-wrap">
+            <img src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp" width="12%" height="12%" alt="">
+            <p id="max">Restaurant partner follows WHO protocol</p>
+          </div> -->
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+
+      </div>
+    </div>
+    <!-- row3 -->
+    <div class="row mt-4">
+      <div class="d-flex flex-wrap">
+        <!-- card1 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img src="https://b.zmtcdn.com/data/pictures/chains/3/143/46ab03171d9eec9cc24d2067569ef485_o2_featured_v2.jpg"
+            class="card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw ">Domino's Pizza</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.3<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Pizza, Fast Food</p>
+              <p id="cost" class="w-50" style="text-align: right;">$50 for one</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">55 min</div>
+            </div>
+            <!-- <hr>
+         <div class="d-flex text-wrap">
+           <img src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp" width="12%" height="12%" alt="">
+           <p id="max">Restaurant partner follows WHO protocol</p>
+         </div> -->
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card2 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/8/2008/32edfc4b9cee788d3a0921f0f5ea0fa9_o2_featured_v2.jpg"
+            class="card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Hira Sweets</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.1<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Mithai, North Indian Sweets, South Indian Sweets</p>
+              <p id="cost" class="w-50" style="text-align: right;">$75 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">43 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card3 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img src="https://b.zmtcdn.com/data/pictures/chains/9/899/6812b7d6166430abf0f62016ea8fe548_o2_featured_v2.jpg"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Saravana Bhavan</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.4<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Rolls, Wraps, Momos</p>
+              <p id="cost" class="w-50" style="text-align: right;">$50 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">45 min</div>
+            </div>
+            <!-- <hr>
+          <div class="d-flex text-wrap">
+            <img src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp" width="12%" height="12%" alt="">
+            <p id="max">Restaurant partner follows WHO protocol</p>
+          </div> -->
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+
+      </div>
+    </div>
+    <!-- row1 -->
+    <div class="row mt-4">
+      <div class="d-flex flex-wrap">
+        <!-- card1 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div>
+          <!-- <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div> -->
+          <img
+            src="https://b.zmtcdn.com/data/pictures/9/4249/926e2ac1722a3fd397cd21b6b8a0a298_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw ">Wenger's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.5<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Icecreams,Cakes</p>
+              <p id="cost" class="w-50" style="text-align: right;">$50 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">36 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card2 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/5/19144765/ae4bee1430d091eedd5c853b4bd91689_o2_featured_v2.jpg?output-format=webp"
+            class="card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Kwality Wall’s Frozen Dessert and Ice Cream Shop</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.6<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Icecreams,Desserts</p>
+              <p id="cost" class="w-50" style="text-align: right;">$10 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">20 min</div>
+            </div>
+            <!--<hr>
+             <div class="d-flex text-wrap">
+              <img src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div> -->
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card3 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/2/307332/4a87d3d44b79ae988c180f9beaee3973_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Wraps Kathi Rolls</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.5<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Rolls, Wraps, Momos</p>
+              <p id="cost" class="w-50" style="text-align: right;">$5 for one</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">40 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp"
+                width="12%" height="12%" alt="">
+              <p id="max">Restaurant partner follows WHO protocol</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+
+      </div>
+    </div>
+    <!-- row2 -->
+    <div class="row mt-4">
+      <div class="d-flex flex-wrap">
+        <!-- card1 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">20% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/1/461/72251ef2ed03f2179854a92d573f199a_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw ">Karim's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">3.9<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">North Indian, Mughlai</p>
+              <p id="cost" class="w-50" style="text-align: right;">$200 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">36 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp"
+                width="12%" height="12%" alt="">
+              <p id="max">Restaurant partner follows WHO protocol</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card2 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/6/8776/8bafe5daa26d74e93ad44a2d1b6f6c5f_o2_featured_v2.jpg?output-format=webp"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Nando's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.4<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Burger, Healthy Food, Portuguese</p>
+              <p id="cost" class="w-50" style="text-align: right;">$100 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">20 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card3 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img src="https://b.zmtcdn.com/data/pictures/chains/0/550/9361ee4d0e18519da526b87f81f067ae_o2_featured_v2.jpg"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Haldiram's</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.2<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Rolls, Wraps, Momos</p>
+              <p id="cost" class="w-50" style="text-align: right;">$5 for one</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">40 min</div>
+            </div>
+            <!-- <hr>
+        <div class="d-flex text-wrap">
+          <img src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp" width="12%" height="12%" alt="">
+          <p id="max">Restaurant partner follows WHO protocol</p>
+        </div> -->
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+
+      </div>
+    </div>
+    <!-- row3 -->
+    <div class="row mt-4">
+      <div class="d-flex flex-wrap">
+        <!-- card1 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img src="https://b.zmtcdn.com/data/pictures/chains/3/143/46ab03171d9eec9cc24d2067569ef485_o2_featured_v2.jpg"
+            class="card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw ">Domino's Pizza</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.3<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Pizza, Fast Food</p>
+              <p id="cost" class="w-50" style="text-align: right;">$50 for one</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">55 min</div>
+            </div>
+            <!-- <hr>
+       <div class="d-flex text-wrap">
+         <img src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp" width="12%" height="12%" alt="">
+         <p id="max">Restaurant partner follows WHO protocol</p>
+       </div> -->
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card2 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img
+            src="https://b.zmtcdn.com/data/pictures/chains/8/2008/32edfc4b9cee788d3a0921f0f5ea0fa9_o2_featured_v2.jpg"
+            class="card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Hira Sweets</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.1<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Mithai, North Indian Sweets, South Indian Sweets</p>
+              <p id="cost" class="w-50" style="text-align: right;">$75 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">43 min</div>
+            </div>
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+        <!-- card3 -->
+        <a id="card" href="" class=" border-1 rounded-3 m-1 p-2 pb-0 text-decoration-none text-dark"
+          style="width: 30%;">
+          <!-- <div id="promoted" class="position-absolute rounded-1 ps-1 pe-1 m-2">Promoted</div> -->
+          <div id="offer" class="position-absolute ps-1 pe-1">50% Off</div>
+          <img src="https://b.zmtcdn.com/data/pictures/chains/9/899/6812b7d6166430abf0f62016ea8fe548_o2_featured_v2.jpg"
+            class=" card-img-top rounded-4" data-aos="zoom-in" data-aos-duration="500" width="20px" height="230px"
+            alt="...">
+          <div class="card-body pt-2">
+            <div class="d-flex">
+              <p id="name" class="overflw">Saravana Bhavan</p>
+              <p id="rating" class="bg-success rounded-2 ms-4 ps-1 pe-1">4.4<i class="fa-solid fa-star"
+                  style="font-size: .5rem;"></i></p>
+            </div>
+
+            <div class="d-flex">
+              <p id="category" class="overflw w-50">Rolls, Wraps, Momos</p>
+              <p id="cost" class="w-50" style="text-align: right;">$50 for two</p>
+            </div>
+            <div class="d-flex">
+              <div class="w-75"></div>
+              <div id="time" class="w-25" style="text-align: right;">45 min</div>
+            </div>
+            <!-- <hr>
+        <div class="d-flex text-wrap">
+          <img src="https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png?output-format=webp" width="12%" height="12%" alt="">
+          <p id="max">Restaurant partner follows WHO protocol</p>
+        </div> -->
+            <hr>
+            <div class="d-flex text-wrap">
+              <img
+                src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp"
+                width="20%" height="10%" alt="">
+              <p id="max">Follows all Max Safety measures to ensure your food is safe</p>
+            </div>
+
+          </div>
+        </a>
+        <!-- card ends -->
+
+      </div>
+    </div>
+
+  </div>
+  <!-- footer -->
+
+  <footer class="text-center text-lg-start" style="background-color: #f5f6f9">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0 mt-4">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row mb-4">
+          <div class="col-lg-9 col-sm-4">
+            <img
+              src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"
+              class="logo" alt="">
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mt-3">
+            <h6 class="text-uppercase mb-4 text-dark">ABOUT ZOMATO</h6>
+            <p>
+              <a class="text-decoration-none text-dark lh">Who We Are</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Blog</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Work With Us</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Investor Relations</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Report Fraud</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Press Kit</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Contact Us</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 text-dark">Zomaverse</h6>
+            <p>
+              <a class="text-decoration-none text-dark lh">Zomato</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Blinkit</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Feeding India</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Hyperpure</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Zomaland</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column-->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 text-dark">For restaurants</h6>
+            <p>
+              <a class="text-decoration-none text-dark lh">Partner With Us</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Apps For You</a>
+            </p>
+            <h6 class="text-uppercase mb-4 text-dark">For Enterprises</h6>
+            <p>
+              <a class="text-decoration-none text-dark lh">Zomato For Enterprise</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 text-dark">Learn More</h6>
+            <p>
+              <a class="text-decoration-none text-dark lh">Privacy</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Security</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Terms</a>
+            </p>
+            <p>
+              <a class="text-decoration-none text-dark lh">Sitemap</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 ">Social Links</h6>
+
+            <!-- Facebook -->
+            <a class="btn btn-primary btn-floating m-0 rounded-circle w-25" style="background-color: black;" href="#!"
+              role="button"><i class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-primary btn-floating m-0 rounded-circle" style="background-color: black" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-primary btn-floating m-0 rounded-circle" style="background-color: black" href="#!"
+              role="button"><i class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-primary btn-floating m-0 rounded-circle" style="background-color: black" href="#!"
+              role="button"><i class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-primary btn-floating m-0 rounded-circle" style="background-color: black" href="#!"
+              role="button"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn btn-primary btn-floating m-0 rounded-circle" style="background-color: black" href="#!"
+              role="button"><i class="fab fa-github"></i></a>
+
+              <img class="store" src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="">
+              <img  class="store" src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="">
+          </div>
+
+         
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+    <hr>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="font-weight: 200; font-size: small;">
+      By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content
+      Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footerends-->
+
+
+</body>
+
+</html>
